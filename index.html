@@ -103,6 +103,23 @@ footer{background:var(--blue);color:var(--sky);border-top:6px solid var(--yellow
 footer .w{padding-block:28px}
 @media (max-width:980px){.cycle{grid-template-columns:repeat(2,minmax(0,1fr))}.letters{grid-template-columns:1fr}.lnav{position:static}}
 @media (max-width:620px){.cycle,.two{grid-template-columns:1fr}.nav ul{margin-left:0}}
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.lvl{background:var(--white);border:1px solid var(--line);border-top:6px solid var(--blue);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.lvl.l2{border-top-color:var(--pale)}
+.lvl.l3{border-top-color:var(--yellow)}
+.lvl .lnum{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue2)}
+.lvl h3{margin:0;font-size:21px}
+.lvl .what{color:var(--ink);font-size:15px;margin:0}
+.lvl dl{margin:0;display:grid;gap:8px;font-size:14.5px}
+.lvl dt{font-weight:700;color:var(--ink2);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.lvl dd{margin:0;color:var(--ink)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin-top:18px}
+.flow div{flex:1 1 150px;background:var(--sky);border-radius:12px;padding:12px 14px;font-size:14.5px}
+.flow div b{display:block;color:var(--blue2);margin-bottom:2px}
+.flow .arr{flex:0 0 auto;background:none;padding:0;display:flex;align-items:center;font-size:22px;color:var(--blue);font-weight:700}
+.who{width:100%}
+.who td:first-child{font-weight:700;white-space:nowrap}
+@media (max-width:860px){.levels{grid-template-columns:1fr}.flow .arr{transform:rotate(90deg);width:100%;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
 </style>
 
@@ -110,8 +127,8 @@ footer .w{padding-block:28px}
   <div class="w">
     <a href="#home" aria-label="На головну"><span class="logo" role="img" aria-label="Карітас України"></span></a>
     <ul>
-      <li><a href="#home">Зараз</a></li>
-      <li><a href="#proces">Як рухається</a></li>
+      <li><a href="#home">Як ми працюємо</a></li>
+      <li><a href="#proces">Спецпроєкти</a></li>
       <li><a href="#svichka">Різдвяна свічка</a></li>
       <li><a href="#lysty">Листи</a></li>
       <li><a href="#dokumenty">Документи</a></li>
@@ -123,7 +140,7 @@ footer .w{padding-block:28px}
 
 <header class="hero">
   <div class="w">
-    <span class="tag">Карітас України · фандрейзинг · робочий хаб команди</span>
+    <span class="tag">Карітас України · фандрейзинг · як ми працюємо</span>
     <h1 id="hero-title">Усе для руху — в одному місці</h1>
     <p id="hero-lead">Відкрий, подивись, що зараз у роботі, візьми потрібний лист чи чекліст і рухайся далі.</p>
   </div>
@@ -132,6 +149,84 @@ footer .w{padding-block:28px}
 <main>
 <!-- ============ ЗАРАЗ ============ -->
 <div data-view="home">
+<section>
+  <div class="w">
+    <div class="sh"><span class="num">Три рівні</span><h2>Як влаштований фандрейзинг Карітасу</h2>
+      <p>Ми залучаємо кошти на трьох рівнях. Великі гранти тримають програми роками, малі закривають конкретні потреби, а спецпроєкти — наш спосіб швидко перевірити нову ідею разом із програмами, бізнесом і партнерами.</p></div>
+    <div class="levels">
+      <article class="lvl">
+        <span class="lnum">Рівень 1</span>
+        <h3>Інституційний фандрейзинг</h3>
+        <p class="what">Великі гранти від міжнародних донорів і фондів.</p>
+        <dl>
+          <div><dt>Що дає</dt><dd>Стабільне фінансування програм на роки вперед</dd></div>
+          <div><dt>Хто працює</dt><dd>Ми разом із програмними департаментами</dd></div>
+          <div><dt>Що важливо</dt><dd>Доказ результату, звітність, довіра донора</dd></div>
+        </dl>
+      </article>
+      <article class="lvl l2">
+        <span class="lnum">Рівень 2</span>
+        <h3>Малі гранти</h3>
+        <p class="what">Невеликі гранти на конкретну потребу програми чи громади.</p>
+        <dl>
+          <div><dt>Що дає</dt><dd>Швидкі гроші на окрему задачу або продовження пілоту</dd></div>
+          <div><dt>Хто працює</dt><dd>Ми, колеги з програм, місцеві Карітаси</dd></div>
+          <div><dt>Що важливо</dt><dd>Чітка потреба, короткий строк, видимий результат</dd></div>
+        </dl>
+      </article>
+      <article class="lvl l3">
+        <span class="lnum">Рівень 3</span>
+        <h3>MVP спецпроєктів</h3>
+        <p class="what">Спецпроєкти, які ми запускаємо разом із колегами з програм, бізнесом і партнерами.</p>
+        <dl>
+          <div><dt>Що дає</dt><dd>Нових людей і компаній у базі, кошти, перевірені ідеї</dd></div>
+          <div><dt>Хто працює</dt><dd>Ми + програми + бізнес + партнери і місцеві Карітаси</dd></div>
+          <div><dt>Що важливо</dt><dd>Критерії успіху до старту і рішення 3+1 за даними пілоту</dd></div>
+        </dl>
+        <a class="go" href="#proces">Як запускаємо спецпроєкт →</a>
+      </article>
+    </div>
+    <h3 class="sub">Як рівні пов'язані між собою</h3>
+    <div class="flow">
+      <div><b>Ідея</b>Від програм, регіонів чи бізнесу</div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div><b>MVP спецпроєкту</b>Пілот із партнерами в регіонах</div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div><b>Доведений результат</b>Дані пілоту, люди в базі, звіт партнеру</div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div><b>Малий грант</b>Продовжуємо і розширюємо</div>
+      <span class="arr" aria-hidden="true">→</span>
+      <div><b>Інституційний грант</b>Або постійна програма</div>
+    </div>
+    <p class="note" style="margin-top:14px">Спецпроєкт — це не окрема акція, а перша сходинка: те, що спрацювало в пілоті, ми несемо донорам як доведений результат.</p>
+  </div>
+</section>
+<section class="p">
+  <div class="w">
+    <div class="sh"><span class="num">Ролі</span><h2>Хто що робить</h2>
+      <p>Фандрейзинг працює, лише коли кожен знає свою частину.</p></div>
+    <div class="tbl"><table class="who">
+      <thead><tr><th>Хто</th><th>Що робить</th></tr></thead>
+      <tbody>
+        <tr><td>Команда фандрейзингу</td><td>Веде процес на всіх трьох рівнях: шукає донорів і партнерів, веде домовленості, тримає базу контактів, готує матеріали і звітність.</td></tr>
+        <tr><td>Колеги з програм</td><td>Дають потребу, цифри й історії, відповідають за результат і звітність по програмі. Пропонують ідеї спецпроєктів.</td></tr>
+        <tr><td>Бізнес</td><td>Співавтор, а не спонсор: разом визначаємо формат, бюджет і критерії успіху спецпроєкту.</td></tr>
+        <tr><td>Партнери і місцеві Карітаси</td><td>Запускають спецпроєкт у регіонах, збирають кошти й людей, дають дані для звіту.</td></tr>
+        <tr><td>Топменеджмент 3+1</td><td>Ухвалює рішення на воротах: чи заходимо в спецпроєкт і чи масштабуємо його після пілоту.</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+<section>
+  <div class="w">
+    <div class="sh"><span class="num">Щоб процес був дієвим</span><h2>Що ми робимо завжди</h2></div>
+    <div class="grid">
+      <div class="card"><h3>Критерії успіху — до старту</h3><p>Кожен спецпроєкт заходить через ворота 3+1 з форматом, бюджетом і зрозумілою метою. Інакше незрозуміло, що масштабувати.</p></div>
+      <div class="card"><h3>Кожна людина — у базі</h3><p>Хто купив свічку, прийшов на подію чи відгукнувся на лист — потрапляє в базу і отримує наступний крок.</p></div>
+      <div class="card"><h3>Результат пілоту — у заявку</h3><p>Цифри й історії зі спецпроєктів збираємо так, щоб їх можна було одразу використати в заявці на грант.</p></div>
+      <div class="card"><h3>Один чат, чіткі зони</h3><p>З кожним партнером — один спільний чат, де кожен називає свою зону відповідальності.</p></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="w">
     <div class="sh"><span class="num">Стан на 17 листопада 2026</span><h2>Що зараз у роботі</h2></div>
@@ -430,8 +525,8 @@ footer .w{padding-block:28px}
 <script>
 (function(){
   var heroes={
-    home:["Усе для руху — в одному місці","Відкрий, подивись, що зараз у роботі, візьми потрібний лист чи чекліст і рухайся далі."],
-    proces:["Як рухається фандрейзинг","Спецпроєкти, цикл із двома воротами, програми і партнери."],
+    home:["Як ми працюємо","Три рівні фандрейзингу, хто що робить і як спецпроєкт виростає в грант. Нижче — що зараз у роботі."],
+    proces:["Спецпроєкти","Як ми з програмами, бізнесом і партнерами запускаємо MVP: цикл із двома воротами, продукти і програми."],
     svichka:["Різдвяна свічка 2026","Календар сезону, маршрут свічки і чекліст події."],
     lysty:["Листи","Шаблони для партнерів, лідерів думок, волонтерів і місцевих Карітасів."],
     dokumenty:["Документи","Лограмка, ТЗ, бренд-кіт і всі робочі матеріали."],
